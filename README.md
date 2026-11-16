@@ -29,18 +29,7 @@
 
 ## Architecture
 
-```mermaid
-flowchart LR
-  App["Flutter app<br/>iOS and Android"] --> FS[("Firestore")]
-  App --> Auth["Firebase Auth"]
-  App --> ST["Cloud Storage"]
-  FS -- triggers --> CF["Cloud Functions<br/>Node.js"]
-  SCH["Scheduled jobs"] --> CF
-  CF --> FCM["Push notifications<br/>FCM"]
-  CF --> FS
-  CF --> AI["Gemini API"]
-  Panel["Admin and analytics panel<br/>HTML, CSS, JS"] --> FS
-```
+![Campace architecture](assets/architecture.png)
 
 ## Engineering notes
 
